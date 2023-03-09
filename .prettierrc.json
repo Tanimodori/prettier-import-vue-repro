@@ -6,5 +6,5 @@
   "printWidth": 100,
   "trailingComma": "none",
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": ["^@/", "^#", "^[./]"]
+  "importOrder": ["^[./]"]
 }
