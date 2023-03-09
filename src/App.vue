@@ -1,6 +1,16 @@
+<script lang="ts">
+import { dummy } from './dummy'
+import { ref } from 'vue'
+
+export const foo = ref(dummy)
+</script>
+
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import { computed } from 'vue'
+
+const bar = computed(() => foo.value)
 </script>
 
 <template>
@@ -8,7 +18,7 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="You did it!" :bar="bar" />
     </div>
   </header>
 
